@@ -14,3 +14,19 @@ management:
 feign:
   hystrix:
     enabled: false
+
+ecurity:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: ${vcap.services.gitpass.credentials.id}
+      clientSecret: ${vcap.services.gitpass.credentials.secret}  
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      clientAuthenticationScheme: form
+      preEstablishedRedirectUri: https://feign-smichels.cfapps.io/login
+      registered-redirect-uri: https://feign-smichels.cfapps.io/login
+      use-current-uri: false
+    resource:
+      userInfoUri: https://api.github.com/user

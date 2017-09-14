@@ -8,4 +8,5 @@ applications:
     SPRING_PROFILES_ACTIVE: dev
   services:
   - config-get
+  - gitpass
   stack: cflinuxfs2
