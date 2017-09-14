@@ -1,7 +1,7 @@
 applications:
 - name: feign
   instances: 1
-  memory: 750M
+  memory: 1G
   disk_quota: 1024M
   buildpack: java_buildpack
   env:
