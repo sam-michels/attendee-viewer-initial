@@ -1,0 +1,11 @@
+applications:
+- name: feign
+  instances: 1
+  memory: 750M
+  disk_quota: 1024M
+  buildpack: java_buildpack
+  env:
+    SPRING_PROFILES_ACTIVE: dev
+  services:
+  - config-repo
+  stack: cflinuxfs2
