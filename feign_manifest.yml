@@ -7,5 +7,5 @@ applications:
   env:
     SPRING_PROFILES_ACTIVE: dev
   services:
-  - config-repo
+  - config-get
   stack: cflinuxfs2
